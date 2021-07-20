@@ -1,0 +1,12 @@
+Here after including (n-1)th index we have choice that we can include that element multiples time so we will keep checking to
+full length
+
+BUT once we reject that element then we ignore it
+and will keep checking on left out elements
+
+t[n][w]=max(val[n-1]+t[n][w-wt[n-1], t[n-1][w])
+                       ^
+                       |
+                   [HERE SINCE WE ACCEPTED THAT ELEMENT SO WE CAN THAKE IT MULTIPLE TIMES SO WILL KEEP CHECKING CURENT LEN]
+else:
+t[n][w]=t[n-1][w] <---  see checking to remaining element

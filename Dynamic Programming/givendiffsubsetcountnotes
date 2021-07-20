@@ -1,0 +1,18 @@
+Sum(set1) - Sum(set2) = diff ---------- 1
+Sum(set1) + Sum(set2) = Sum(arr) --------2
+
+Add 1+2
+
+Sum(set1) = diff + sum(arr)  // 2
+
+if we find the sum(set1) count then its means eg
+arr= 1,1,2,3
+
+set1 = 1,1,2   sum=4
+set2= 3        sum = 3
+
+sum(set1)-sum(set2) =1
+
+so if we find count of sets such that their sum is equal  ==  diff + sum(arr)  // 2   1+7//2=4
+
+our problem reduced into find subsets in given set having sum equal to Sum1
