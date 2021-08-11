@@ -49,7 +49,7 @@ class LinkedList:
         else:
             new_node=Node(data)
             new_node.next_node=n.next_node
-            n.next_node=new_node
+            n.next_node= new_node
 
 
     def insert_Before(self,data,x):

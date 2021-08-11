@@ -10,12 +10,12 @@ adj_lis = {
            3: {5: 3},
            4: {6: 1},
            5: {4:2, 6: 5},
-            6:{}
+           6:{}
            }
 
-distance ={}
-queue =Queue()
-s =1
+distance = {}
+queue = Queue()
+s = 1
 distance[s]=0
 for vertex in adj_lis:
     if vertex != s:

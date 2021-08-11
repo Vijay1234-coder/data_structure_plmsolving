@@ -21,7 +21,7 @@ def quickSort(arr,start,end):
 
 
 
-arr = [ 10, 7, 8, 9, 1, 5 ]
+arr = [ 5, 7, 8, 9, 1, 10 ]
 n = len(arr)
 
 quickSort(arr,0,n-1)

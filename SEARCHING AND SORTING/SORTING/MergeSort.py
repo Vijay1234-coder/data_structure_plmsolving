@@ -39,12 +39,11 @@ def mergeSort(arr):
     mid = len(arr)//2
     if len(arr)<2:
         return arr
-    left_array = arr[:mid]
-    right_array = arr[mid:]
-    mergeSort(left_array)
-    mergeSort(right_array)
-    mergeList(arr,left_array,right_array)
-
+    leftarr =arr[:mid]
+    rightarr =arr[mid:]
+    mergeSort(leftarr)
+    mergeSort(rightarr)
+    mergeList(arr,leftarr,rightarr)
 
 
 

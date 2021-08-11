@@ -1,11 +1,21 @@
 def insertitionSort(arr,n):
-    for index in range(1,n):
-        current_element = arr[index]
-        pos = index
-        while current_element < arr[pos-1] and pos>0:
-            arr[pos] = arr[pos-1]
-            pos = pos -1
-        arr[pos]  = current_element
+    # for index in range(1,n):
+    #     current_element = arr[index]
+    #     pos = index
+    #     while current_element < arr[pos-1] and pos>0:
+    #         arr[pos] = arr[pos-1]
+    #         pos = pos -1
+    #     arr[pos]  = current_element
+
+    for i  in range(1,n):
+        curr = arr[i]
+        pos =i
+        while curr<arr[pos-1] and pos>0:
+            arr[pos]=arr[pos-1]
+            pos-=1
+        arr[pos]=curr
+
+
 
 
 
