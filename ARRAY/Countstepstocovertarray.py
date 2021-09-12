@@ -1,5 +1,5 @@
 '''Important'''
-'''Count minimum steps to get the given desired array
+''' Count minimum steps to get the given desired array
 Consider an array with n elements and value of all the elements is zero. We can perform following operations on the array. 
  
 

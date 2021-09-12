@@ -26,23 +26,26 @@ def postorder_rec(root):
     else:
         return postorder_rec(root.left)+postorder_rec(root.right)+[root.val]
 def postorder_iter(root):
-    stack =[]
-    result =[]
-    while root!=None or stack!=[]:
-        while root!=None:
-            stack.append(root)
-            root =root.left
-        temp = stack[-1].right  # here it store the right of current root
-        if temp!=None: # if current root's right exist then we make it as a root
-            root =temp
-        else: # if not exist then there are two cases arrise 1. is okaay that root is ans 2. if it is right child of it s parent then after printing it we need to priont its parent also becaouse  left right root
-            temp = stack.pop()
-            result.append(temp.val)
-            while stack!=[] and temp == stack[-1].right: # after poping current left next which left in stack is its parent node
-                temp = stack.pop() # we checked if temp which is current left is right of its parent then we need to print its parent also
-                result.append(temp.val)
-    return result
+    ''' 1. Push root  to stack 1
+        2. run a while loop s1 is not empty
+            pop top of stack 1  and push it to stack 2
+           i) check left of poped element if its not none  then add to stack 1
+           ii) push poped elements right to stack 1
+        3. print elements of stack2 in reverse order '''
 
+    if root==None:
+        return []
+    s1 =[root]
+    s2 = []
+    while s1!=[]:
+        poped = s1.pop()
+        s2.append(poped.data)
+        if poped.left!=None:
+            s1.append(poped.left)
+        if poped.right!=None:
+            s1.append(poped.right)
+    s2.reverse()
+    return s2
 def preorder_recur(root):# ROOT LEFT RIGHT
     if root==None:
         return []
@@ -67,10 +70,10 @@ def preorder_iter(root):
     return result
 
 def leve_order(root):
-    queue =[root]
+    queue = [root]
     next_queue = []
-    result =[]
-    level  =[]
+    result = []
+    level  = []
 
     while queue!=[]:
         for root in queue:

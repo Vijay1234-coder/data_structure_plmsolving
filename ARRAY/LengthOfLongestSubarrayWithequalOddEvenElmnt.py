@@ -2,23 +2,23 @@
 import sys
 
 
-def solve1(arr,n):
-    Max =-sys.maxsize
+def solve1(arr, n):
+    Max = -sys.maxsize
     for i in range(n):
-        odd_count =0
-        even_count =0
-        for j in range(i,n):
-            if arr[j]%2==0:
-                even_count+=1
+        odd_count = 0
+        even_count = 0
+        for j in range(i, n):
+            if arr[j] % 2 == 0:
+                even_count += 1
             else:
-                odd_count+=1
-            if odd_count==even_count:
+                odd_count += 1
+            if odd_count == even_count:
                 Max = max(Max,odd_count*2)
 
     return Max
 
 
-def solve2(arr,n):
+def solve2(arr, n):
     mp ={'odd':0,'even':0}
     Max = -sys.maxsize
 
